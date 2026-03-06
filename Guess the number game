@@ -1,0 +1,12 @@
+import random
+print("Hello ! Lets's play a games! Guess the number i am thinking of (1 to 20)")
+x=random.randint(1,20)
+y=input()
+
+if ( x==y ):
+    print("You guessed!")
+else:
+   print(f'No , you didn\'t guess the number , it was {x}')
+
+
+
