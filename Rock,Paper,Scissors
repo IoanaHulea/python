@@ -1,0 +1,44 @@
+import random
+print("Hi, let's play Rock Paper Scissors")
+print("Choose:")
+a=("rock","paper","scissors")
+random_item=random.choice(a)
+
+x=input("").lower()
+
+sad_face=("\U0001F615")
+smiley_face=("\U0001F600")
+
+if(random_item=="rock"):
+    print(f'I choose {random_item}')
+    if(x=="scissors"):
+        print("I won")
+        print(smiley_face)
+    elif(x=="paper"):
+         print("You won")
+         print(sad_face)
+    else:
+        print("NOBODY WON")
+
+elif(random_item=="paper"):
+        print(f'I choose {random_item}')
+        if(x=="rock"):
+            print("I won")
+            print(smiley_face)
+        elif(x=="scissors"):
+            print("You won")
+            print(sad_face)
+        else:
+            print("NOBODY WON")
+else:
+       print(f'I choose {random_item}')
+       if(x=="rock"):
+
+            print("You won")
+            print(sad_face)
+       elif x== "scissors":
+            print("Nobody won")
+
+       else:
+            print("I won")
+            print(smiley_face)
