@@ -1,0 +1,32 @@
+def pin_extractor(poems):
+    secret_codes = []
+    for poem in poems:
+        secret_code = ''
+        lines = poem.split('\n')
+        for line_index, line in enumerate(lines):
+            words = line.split()
+            if len(words) > line_index:
+                secret_code += str(len(words[line_index]))
+            else:
+                secret_code += '0'
+        secret_codes.append(secret_code)
+    return secret_codes
+
+poem = """Don't give me all your time
+don't question me so often
+With eyes so true and faithful
+don't try and catch my hand"""
+
+poem2 = '''I want to be a passenger
+in your car again
+and shut my eyes
+while you sit at the wheel'''
+
+poem3 = '''Light
+Shines
+Through
+Silent
+Windows
+Still'''
+    
+print(pin_extractor([poem,poem2,poem3]))
